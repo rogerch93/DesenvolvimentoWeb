@@ -1,0 +1,74 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <!--PAGE indica que é uma pagina Razor-->
+    <!-- @Model indica o tempo de modelo de dados-->
+
+    <h1>Bem vindo ao Razor!</h1>
+
+    <p>Data de horas atuais: @DateTime.Now</p>
+    @{
+        string nome = "Rogerio";
+    }
+
+    <p>Olá! @nome</p>
+
+    <!-- executando expressões em C#-->
+    <p> A soma de 3 + 3: @(3 + 3)</p>
+
+    <br />
+
+    <h2>Lista de Nomes</h2>
+
+        @{
+            var nomes = new List<string> { "Lucas", "Igor", "Paula" };
+        }
+
+        <ul>
+            @foreach(var nome1 in nomes)
+            {
+                <li>@nome1</li>
+            }
+        </ul>
+
+        <br />
+
+        <h2>Mensagem baseada no horário</h2>
+
+        @{
+            var horaAtual = DateTime.Now.Hour;
+        }
+
+        @if(horaAtual < 12)
+        {
+            <p>Bom dia</p>
+        }
+        else if(horaAtual < 18)
+        {
+            <p>Boa tarde</p>
+        }
+        else
+        {
+            <p>Boa noite!</p>
+        }
+
+        <br />
+
+        <h2>Contagem de 1 a 5</h2>
+
+        <ul>
+            @for(int i = 1; i <= 5; i++)
+            {
+                <li>@i</li>
+            }
+        </ul>
+</body>
+</html>
