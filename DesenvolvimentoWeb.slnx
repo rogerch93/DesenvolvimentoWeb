@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="Projeto01.WebForms/Projeto01.WebForms.csproj" />
+  <Project Path="Projeto01.WebForms/Projeto01.WebForms.csproj" Id="f219d97d-a76f-4572-a0f4-54c4533a3117" />
   <Project Path="Projeto02.Razor/Projeto02.Razor.csproj" />
 </Solution>

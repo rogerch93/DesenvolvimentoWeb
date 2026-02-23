@@ -21,6 +21,10 @@
 
     <p>Olá! @nome</p>
 
+   @*  <input type="text" name="Sobrenome" /> *@
+
+   @Html.TextBox("sobrenome")
+
     <!-- executando expressões em C#-->
     <p> A soma de 3 + 3: @(3 + 3)</p>
 
@@ -70,5 +74,44 @@
                 <li>@i</li>
             }
         </ul>
+
+        <form method="Post">
+            <!--Mostrar erros de validação-->
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+           @*  <label for="nome">Digite seu nome:</label>
+           <input type="text" id="nome" name="nome" required /> *@
+           @Html.Label("Digite seu Nome:")
+           @Html.TextBoxFor(m => m.Nome)
+            <br />
+           @*  <label for="idade">Digite sua idade:</label>
+            <input type="number" id="idade" name="idade" required /> *@
+           @Html.Label("Digite sua Idade:")
+           @Html.TextBoxFor(m => m.Idade)
+            <br />
+
+            <button type="submit">Enviar</button>
+
+            <!--Exibindo resultado apos o envio-->
+            @if (Model.Nome != null)
+            {
+                <p><strong>Nome:</strong><strong>@Model.Nome</strong></p>
+                <p><strong>Idade:</strong><strong>@Model.Idade</strong></p>
+            }
+
+        </form>
+
+            @Html.DropDownList("Categorias", new List<SelectListItem>
+            {
+                new SelectListItem{Text="Tecnologia", Value="1"},
+                    new SelectListItem { Text = "Saúde", Value = "2" },
+                    new SelectListItem { Text = "Educação", Value = "3" }
+    
+            })
+            <br />
+            @Html.Label("Esqueci minha Senha")
+            @Html.CheckBoxFor(m => m.Lembrar )
+
 </body>
 </html>
