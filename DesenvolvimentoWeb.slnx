@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="Projeto01.Conceito/Projeto01.Conceito.csproj" Id="e310c313-94eb-4be4-b0ed-5d45f4f4010d" />
   <Project Path="Projeto01.WebForms/Projeto01.WebForms.csproj" Id="f219d97d-a76f-4572-a0f4-54c4533a3117" />
   <Project Path="Projeto02.Razor/Projeto02.Razor.csproj" />
+  <Project Path="ProjetoMVC/Projeto03.ProjetoMVC.csproj" Id="5f4af6dc-768d-4f90-93b9-9b94c7795544" />
 </Solution>

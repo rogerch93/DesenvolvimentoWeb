@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Projeto03.ProjetoMVC.Models.Produto>
+@{
+    ViewData["Title"] = "Adicionar";
+}
+
+<h2>Adicionar Produto</h2>
+
+<form action="Create" method="post">
+   <div class="form-group">
+       <label for="nome">Nome</label>
+       <input type="text" class="form-control" id="Nome" name="Nome" required />
+   </div>
+
+    <div class="form-group">
+        <label for="preco">Preço</label>
+        <input type="number" class="form-control" id="Preco" step="0.01" name="Preco" required />
+    </div>
+    <br/>
+    <button type="submit" class="btn-success"> Salvar</button>
+    <br/>
+    <a asp-action="Index" class="btn-primary">Voltar</a>
+</form>
